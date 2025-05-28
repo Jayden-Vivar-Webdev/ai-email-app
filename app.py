@@ -7,6 +7,8 @@ import smtplib
 from email.message import EmailMessage
 import csv
 
+port = int(os.environ.get("PORT", 7860))
+
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -301,4 +303,4 @@ with gr.Blocks() as demo:
         delete_button = gr.Button("Delete Contact")
         delete_button.click(fn=delete_contact, inputs=delete_name, outputs=delete_status)
 
-demo.launch(share=True)
+demo.launch(server_name="0.0.0.0", server_port=port, share=False)
