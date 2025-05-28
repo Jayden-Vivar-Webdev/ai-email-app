@@ -1,0 +1,29 @@
+# Ignore Python virtual environment folder
+.venv/
+venv/
+
+
+# Ignore environment variables file
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# VSCode settings
+.vscode/
+
+# macOS system files
+.DS_Store
